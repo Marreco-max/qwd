@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Galeria</title>
+ <link rel="stylesheet" href="11.css">
+
+</head>
+<body>
+    <header>
+        <p><h1>Galeria da família</h1></p>
+    </header>
+
+<img id="imagemm" src="a1.png" alt="Imagem">
+<img id="imagemm" src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2023/07/mortal-kombat-1-3076990.jpg?tf=3840x" alt="Imagem">
+<img id="imagemm" src="https://th.bing.com/th/id/R.a4c68b1804015575a9d8c2017dbf1b14?rik=R6zI97N2r4EApw&riu=http%3a%2f%2fwww.hd-tecnologia.com%2fimagenes%2farticulos%2f2023%2f09%2fDescubre-mas-de-la-historia-de-Mortal-Kombat-1-en-el-nuevo-trailer-de-lanzamiento.jpg&ehk=FlvwC%2fttJd5eoPojMp24cB%2fM9lqwJSMB%2bzuOK%2b1b%2fPY%3d&risl=&pid=ImgRaw&r=0" alt="Imagem">
+<img id="imagemm" src="https://thf.bing.com/th/id/OIP.Q9R8_BJRGLE7Js6pyArhXAHaEK?w=312&h=180&c=7&r=0&o=7&cb=thfc1&pid=1.7&rm=3" alt="Imagem">
+<img id="imagemm" src="https://tse3.mm.bing.net/th/id/OIP.Ou8SontllSoNc33F73dEJwHaEK?cb=thfc1&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Imagem">
+<style>
+        html, body {
+    background-color:#ffffff
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+body img{
+    height: auto;
+    width: 500px;
+}
+
+
+header {
+    background-color: #003366;
+    color: white;
+    padding: 10px;
+}
+</style>
+
+<script>
+var fator_lupa = 2;
+document.querySelectorAll('img').forEach(function(img) {
+    var larguraOriginal = img.clientWidth;
+    var zoomAtivo = false;
+    img.onclick = function () {
+        if (!zoomAtivo) {
+            this.style.width = (larguraOriginal * fator_lupa) + "px";
+            zoomAtivo = true;
+        } else {
+            this.style.width = larguraOriginal + "px";
+            zoomAtivo = false;
+        }
+    };
+});
+</script>
+
+</body>
+</html>
+
